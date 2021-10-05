@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
+        <TextView
+            android:id="@+id/act_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            tools:text="Category"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/act_arrow_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_baseline_chevron_right_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintTop_toTopOf="@id/act_text"
+            app:layout_constraintBottom_toBottomOf="@id/act_text"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_margin="8dp"
+            android:background="@color/black"
+            android:layout_toEndOf="@+id/act_text"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/act_text"
+            app:layout_constraintEnd_toEndOf="@id/act_arrow_image" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
